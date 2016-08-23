@@ -2,7 +2,6 @@
   <custom-marker ng-repeat="pokemon in map_pokemons" position="{{pokemon.position}}"
                  on-click="showPokemon(event, pokemon)">
     <div>
-      {{pokemon.name}}
       <img src="images/pokemon/{{pokemon.id}}.png" height="40" width="40"/>
     </div>
   </custom-marker>
