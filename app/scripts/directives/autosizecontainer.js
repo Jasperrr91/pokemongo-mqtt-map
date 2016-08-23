@@ -13,7 +13,7 @@ angular.module('mqttMapApp')
       link: function postLink(scope, element, attrs) {
         var resize = function(){
           var navbarHeight = $('.navbar-collapse').height();
-          element.height(($window.innerHeight - navbarHeight));
+          element.height(($window.innerHeight ));
           element.width(($window.innerWidth));
           if(scope.hasOwnProperty('maps')){
             angular.forEach(scope.maps, function(map){
