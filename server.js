@@ -20,6 +20,7 @@ io.on('connection', function(socket) {
 
 
 var MQTT_TOPIC          = "pgomapcatch/#";
+var MQTT_TOPIC_2        = "pgomapgeo/#";
 var MQTT_ADDR           = "mqtt://test.mosca.io";
 var MQTT_PORT           = 1883;
 
@@ -34,6 +35,7 @@ var client  = mqtt.connect(MQTT_ADDR,{protocolId: 'MQIsdp', protocolVersion: 3, 
 //Send message: client.publish(MQTT_TOPIC, 'Hello mqtt');
 client.on('connect', function () {
   client.subscribe(MQTT_TOPIC);
+  client.subscribe(MQTT_TOPIC_2);
 });
 
 client.on('message', function (topic, message) {
